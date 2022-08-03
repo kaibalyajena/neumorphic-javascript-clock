@@ -39,19 +39,46 @@ body{
 
 }
 .clock .hour .hr{
-    width: 160px;
-    height: 160px;
+    width: 200px;
+    height: 200px;
 }
 .clock .min .mn{
-    width: 190px;
-    height: 190px;
-}
-.clock .sec .sc{
     width: 230px;
     height: 230px;
+}
+.clock .sec .sc{
+    width: 260px;
+    height: 260px;
 }
 .hr,.mn,.sc{
     display: flex;
     justify-content: center;
-    align-items: center;
+    border-radius: 50%;
+}
+.hr:before{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 100px;
+    background: #ff105e;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+.mn:before{
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 115px;
+    background: orange;
+    z-index: 5;
+    border-radius: 6px 6px 0 0;
+}
+.sc:before{
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 130px;
+    background: white;
+    z-index: 3;
+    border-radius: 6px 6px 0 0;
 }
